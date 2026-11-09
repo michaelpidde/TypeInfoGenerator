@@ -67,9 +67,7 @@ int main(int argc, char* argv[]) {
         if(tokens.size() > 0) {
             std::cout << path << std::endl;
         }
-        for(auto it = tokens.begin(); it != tokens.end(); ++it) {
-            std::cout << TokenKindName(it->kind) << "(" << it->line << "): " << it->text << std::endl;
-        }
+        std::vector<ParsedType> types = Parse(path, tokens);
     }
 
     return 0;

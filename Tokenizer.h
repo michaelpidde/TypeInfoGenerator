@@ -35,3 +35,7 @@ inline const char* TokenKindName(TokenKind kind) {
         default:                     return "Unknown    ";
     }
 }
+
+inline bool IsIdentityChar(char c) {
+    return std::isalnum(static_cast<unsigned char>(c)) || c == '_';
+}

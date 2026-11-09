@@ -3,10 +3,6 @@
 #include <cctype>
 #include <iostream>
 
-static bool IsIdentityChar(char c) {
-    return std::isalnum(static_cast<unsigned char>(c)) || c == '_';
-}
-
 std::vector<Token> Tokenize(const fs::path path, const std::string& src) {
     std::vector<Token> tokens;
     int line = 1;
